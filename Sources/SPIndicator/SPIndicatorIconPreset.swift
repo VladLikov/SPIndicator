@@ -30,7 +30,7 @@ public enum SPIndicatorIconPreset {
     case done
     case error
     case spin(_ style: UIActivityIndicatorView.Style)
-    case customView(_ view: UIView)
+    case custom(_ view: UIView)
 }
 
 // Get view and haptic by Preset.
@@ -50,7 +50,7 @@ public extension SPIndicatorIconPreset {
             let view = UIActivityIndicatorView(style: style)
             view.startAnimating()
             return view
-        case .customView(let view):
+        case .custom(let view):
             return view
         }
     }
